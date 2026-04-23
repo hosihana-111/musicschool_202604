@@ -1,0 +1,32 @@
+/******** foundation*******/
+@use "./foundation/reset";
+@use "./foundation/base";
+@use "./foundation/mixin";
+@use "./foundation/variable";
+
+
+/******** layout*******/
+// @use "./layout/p-footer";
+@use "./layout/l-header";
+@use "./layout/l-inner";
+// @use "layout/_main";
+// @use "layout/_sidebar";
+
+
+/********* object*******/
+// Componentのindex.scssの読み込み
+@use "./object/component";
+
+
+// Projectのindex.scssの読み込み
+@use "./object/project";
+
+// utilityのindex.scssの読み込み
+
+@use "./object/utility";
+
+// Utility
+// @use "object/utility/_align";
+// @use "object/utility/_clearfix";
+// @use "object/utility/_margin";
+// @use "object/utility/_typography";
