@@ -27,7 +27,7 @@
                 <?php if (has_post_thumbnail()): ?>
                 <?php the_post_thumbnail('large'); ?>
                 <?php else: ?>
-                  <img src="<?php echo get_template_directory_uri(); ?>/images/result_details/result01.jpg" alt="マイクを持って歌う男性の写真">
+                  <img src="<?php echo esc_url( get_template_directory_uri() . '/images/common/no-image.png' ); ?>" alt="No image">
                 <?php endif; ?>
               </div>
               <div class="p-result-details-card__body">

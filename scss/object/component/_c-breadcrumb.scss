@@ -70,14 +70,24 @@
   display: flex;
   align-items: center;
 
+    transition: opacity 0.4s;
+
   @include sp {
    
     height: 3.6rem;
   white-space: nowrap;
   }
 
-
 }
+
+  .c-breadcrumbs a:hover {
+    opacity: 0.6;
+  
+  }
+
+
+
+
 .c-breadcrumbs .current-item {
     height: initial;
   }

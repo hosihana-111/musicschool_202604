@@ -148,7 +148,7 @@
                      <?php if (has_post_thumbnail()) : ?>
                      <?php the_post_thumbnail(); ?>
                      <?php else : ?>
-                      <img src="<?php echo get_template_directory_uri(); ?>/images/voice/voice01.jpg" alt="証券会社勤務　丸山さん">
+                      <img src="<?php echo esc_url( get_template_directory_uri() . '/images/common/no-image.png' ); ?>" alt="No image">
                         <?php endif; ?>
                   </div>
                   <div class="p-voice-item__body">
@@ -313,7 +313,7 @@
                     <?php if (has_post_thumbnail()) : ?>
                     <?php the_post_thumbnail(); ?>
                     <?php else : ?>
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/blog_details/blog01.jpg" alt="アコースティックギターを弾く人">
+                    <img src="<?php echo esc_url( get_template_directory_uri() . '/images/common/no-image.png' ); ?>" alt="No image">
                     <?php endif; ?>
                   </div>
                   <div class="p-blog-item__body">

@@ -22,7 +22,7 @@
                         <?php if (has_post_thumbnail($prev_post->ID)): ?>
                         <?php echo get_the_post_thumbnail($prev_post->ID); ?>
                         <?php else: ?>
-                      <img src="<?php echo get_template_directory_uri(); ?>/images/blog_details/article.jpg" alt="マイクで熱唱する女性">
+                       <img src="<?php echo esc_url( get_template_directory_uri() . '/images/common/no-image.png' ); ?>" alt="No image">
                       <?php endif; ?>
                       </div>
                       <p class="p-article-nav__box-text"><?php echo wp_trim_words($prev_post->post_title, 25, '...'); ?></p>

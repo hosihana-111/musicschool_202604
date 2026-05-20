@@ -32,6 +32,23 @@
 .p-result-list-item__img {
    position: relative;
 
+    width: 38.7rem;
+
+    @include sp {
+        width: 100%;
+    }
+
+    img {
+        aspect-ratio: 387 / 273;
+        height: auto;
+        display: block;
+        object-fit: cover;
+
+        @include sp {
+            aspect-ratio: 335 / 200;
+        }
+    }
+
 }
 .p-result-list-item__body {
   margin-top: 1.9rem;

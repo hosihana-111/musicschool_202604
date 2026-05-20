@@ -5,8 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>きたむらミュージックスクール</title>
-  <meta name="description" content="「音楽で生きる」を叶えるミュージックスクール"> 
+ 
 <!-- icon -->
  <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/icon/favicon.svg" id="favicon" type="image/x-icon" sizes="32x32">
  <!-- font -->
@@ -14,9 +13,11 @@
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
 
+  <?php wp_head(); ?>
 </head>
 
-<body style="display: none;">
+<body <?php body_class(); ?> style="display: none;">
+<?php wp_body_open(); ?>
   <div id="container">
     <!-- ヘッダー -->
     <header id="header" class="p-header l-header">
@@ -62,5 +63,5 @@
           </div> -->
         </div>
       </div>
-      <?php wp_head(); ?>
+    
     </header>
