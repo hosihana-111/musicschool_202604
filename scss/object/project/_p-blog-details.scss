@@ -171,6 +171,11 @@
   margin-block: 1.7rem;
   font-size: 1.8rem;
   line-height: calc(30 / 18);
+  @include sp {
+   
+    font-size: 1.6rem;
+    line-height: calc(30 / 16);
+  }
 }
 
 .p-blog-details__content h2{
@@ -180,6 +185,7 @@
   line-height: calc(40 / 20);
 
   @include sp {
+      margin-block: 3.5rem 1.5rem;
     line-height: calc(30 / 20);
   }
 }
@@ -188,7 +194,7 @@
   margin-block: 1.7rem;
 
   @include sp {
-    margin-top: 3.9rem;
+    margin-top: 4rem;
   }
 
   img {
@@ -205,7 +211,11 @@
 .p-blog-details__content ul,
 .p-blog-details__content ol {
   margin-block: 2.8rem;
-  padding-left: 1em;
+  padding-left: 1rem;
+
+  @include sp {
+    padding-left: 1.5rem;
+  }
 }
 
 .p-blog-details__content li {
@@ -256,7 +266,7 @@
   @include sp {
     column-gap: 1.7rem;
     padding: 1.7rem 2rem 1.1rem 2.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
   }
       
   &::before {
@@ -395,13 +405,20 @@ border-bottom: 0.5px solid;
 
 // }
 
+.p-blog-details__content a {
+    transition: opacity 0.4s;
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
 
 // 前後記事ナビ
 .p-blog-details__article-nav {
     margin-top: 5rem;
 
     @include sp {
-        margin-top: 4.2rem;
+        margin-top: 3.9rem;
     }
 }
 

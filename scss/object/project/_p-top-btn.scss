@@ -49,25 +49,19 @@
   }
 }
 
-// お問い合わせページの下マージン調整
-//  .p-top-btn__bg--contact {
-//   margin-bottom: 3rem;
 
-//   @include sp {
-//     margin-bottom: 2rem;
-
-
-//   }
-
-// }
 
 .p-contact {
   .p-top-btn {
     height: auto;
     bottom: 3rem;
-    right: -1.4rem;
+      right: 0;
+    transform: translateX(1.5rem);
+
     @include sp {
       bottom: 2rem;
+    right: 0;
+      transform: translateX(-1rem);
     }
   }
 }

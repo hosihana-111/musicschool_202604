@@ -20,6 +20,7 @@
      a,
     span {
       margin: 0;    
+       
       }
 
 a,
@@ -55,10 +56,13 @@ a,
       color: $white;
       background-color: $black;
     }
-  .extend {
-      display: inline-block;
-      padding-inline: 1rem;
-      padding-bottom: 1rem;
+  span.extend{
+        display: flex;
+  align-items: center;
+  justify-content: center;
+    
+      padding-inline: 1rem ;
+      padding-bottom: 1rem ;
       font-size: 1.8rem;
       font-weight: bold;
       border: none;

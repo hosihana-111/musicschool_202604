@@ -21,48 +21,48 @@
       <section id="blog-list" class="p-blog-list">
         <div class="l-inner">
           <h2 class="c-section-title">ブログ一覧</h2>
+          <?php if (have_posts()): ?>
           <div class="p-blog-list__items">
-            <?php
-            if (have_posts()):
-            while (have_posts()): 
+            <?php while (have_posts()):
               the_post();
             ?>
-              <a href="<?php the_permalink(); ?>" class="p-blog-list__item p-blog-list-item u-opacity">
-                <div class="p-blog-list-item__img ">
-                  <span class="c-label"><?php
-                        $terms = get_the_terms(get_the_ID(), 'blog_cate');
-                        if (!empty($terms) && !is_wp_error($terms)) {
-                         echo esc_html($terms[0]->name);
-                          }
-                          ?>
-                  </span>
-                  <?php if (has_post_thumbnail()) : ?>
-            <?php the_post_thumbnail(); ?>
-          <?php else : ?>
-                     <img src="<?php echo esc_url( get_template_directory_uri() . '/images/common/no-image.png' ); ?>" alt="No image">
-                  <?php endif; ?>
-                </div>
-                <div class="p-blog-list-item__body">
-                  <h3 class="p-blog-list-item__heading"> <?php echo wp_trim_words(get_the_title(), 26, '...'); ?> </h3>
-                  <time class="p-blog-list-item__date"  datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
-                  <p class="p-blog-list-item__text c-text">
-                    <?php echo wp_trim_words(get_the_content(), 120, '...'); ?>
-                  </p>
-                </div>
-              </a>
+            <a href="<?php echo esc_url(get_permalink()); ?>" class="p-blog-list__item p-blog-list-item u-opacity">
+              <div class="p-blog-list-item__img ">
                 <?php
-                endwhile;
-                endif;
-                ?>          
-
-            
-
+                  $terms = get_the_terms(get_the_ID(), 'blog_cate');
+                  if (!empty($terms) && !is_wp_error($terms)) :
+                ?>
+                  <span class="c-label">
+                    <?php echo esc_html($terms[0]->name); ?>
+                  </span>
+                <?php endif; ?>
+                <?php if (has_post_thumbnail()) : ?>
+                  <?php the_post_thumbnail(); ?>
+                <?php else : ?>
+                  <img src="<?php echo esc_url(get_template_directory_uri() . '/images/common/no-image.png'); ?>" alt="No image">
+                <?php endif; ?>
+              </div>
+              <div class="p-blog-list-item__body">
+                <h3 class="p-blog-list-item__heading">
+                  <?php echo wp_trim_words(get_the_title(), 26, '...'); ?>
+                </h3>
+                <time class="p-blog-list-item__date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
+                <p class="p-blog-list-item__text c-text">
+                  <?php echo wp_trim_words(get_the_excerpt(), 120, '...'); ?>
+                </p>
+              </div>
+            </a>
+            <?php endwhile; ?>
           </div>
-        </div>
-         <!-- ページャー -->
-        <div class="p-blog-list__pagination c-pager">
-         
+
+          <!-- ページャー -->
+          <div class="p-blog-list__pagination c-pager">
             <?php wp_pagenavi(); ?>
+          </div>
+          <?php else : ?>
+          <p class="c-text__empty">投稿がありません</p>
+          <?php endif; ?>
+
         </div>
       </section>
 

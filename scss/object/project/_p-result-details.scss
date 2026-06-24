@@ -115,7 +115,7 @@
 
 .p-result-profile__table dt,
 .p-result-profile__table dd {
-    height: 3.8rem;
+    height: 3.7rem;
     //   border: solid 0.1rem #707070;
     display: flex;
     align-items: center;
@@ -162,15 +162,12 @@
 
     font-size: 1.8rem;
     line-height: 1.6666666667;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 6;
-    overflow: hidden;
+    
 
     @include sp {
         width: 100%;
         line-height: calc(30 / 18);
-        -webkit-line-clamp: 3;
+       
 
     }
 }
@@ -202,7 +199,7 @@
     
 
     @include sp {
-        margin-top: 3.5rem;
+        margin-top: 3.7rem;
      
     }
 }

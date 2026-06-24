@@ -5,6 +5,7 @@
 .p-child-fv {
   position: relative;  
   width: 100%;
+    max-width: 100%;
   background: #e8e8e8;
 }
 
@@ -12,12 +13,15 @@
 .p-child-fv__img {
   position: relative;
   width: 100%;
+   max-width: 100%;
 
   img {
     aspect-ratio: 1080 / 200;
     object-fit: cover;
     height: auto;
     display: block;
+      width: 100%;
+  max-width: 100%;
 
     @include sp {
       aspect-ratio: 375 / 300;

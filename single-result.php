@@ -19,8 +19,8 @@
                 <span class="c-label c-label--lg">
                    <?php
                     $terms = get_the_terms(get_the_ID(), 'genre');
-                    if (!empty($terms) && !is_wp_error($terms)) {
-                     echo $terms[0]->name;
+                  if (!empty($terms) && !is_wp_error($terms)) {
+                   echo esc_html($terms[0]->name);
                     }
                     ?>
                 </span>
@@ -33,7 +33,7 @@
               <div class="p-result-details-card__body">
                 <h1 class="p-result-details-card__text"><?php the_title(); ?></h1>
                 <div  class="p-result-details-card__date">
-                  <time datetime="the_time('Y-m-d')"><?php the_time('Y.m.d'); ?></time>
+                  <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
                 </div>
                 
               </div>
@@ -54,7 +54,9 @@
                   <dt scope="row">ジャンル</dt>
                   <dd><?php
                       $terms = get_the_terms(get_the_ID(), 'genre');
-                     echo $terms[0]->name;
+                     if (!empty($terms) && !is_wp_error($terms)) {
+                       echo esc_html($terms[0]->name);
+                     }
                      ?>
                      </dd>
                 </dl>

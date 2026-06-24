@@ -21,26 +21,26 @@
         <div class="l-inner">
           <h2 class="c-section-title">卒業実績一覧</h2>
 
+          <?php if (have_posts()): ?>
           <div class="p-result-list__grid">
-            <?php
-            if (have_posts()):
-              while (have_posts()):
-                the_post();
+            <?php while (have_posts()):
+              the_post();
             ?>
             <div class="p-result-list__item p-result-list-item">
               <a href="<?php the_permalink(); ?>" class="u-opacity">
                 <div class="p-result-list-item__img">
-                  <span class="c-label c-label--lg">                  
+                  <span class="c-label c-label--lg">
                   <?php
                   $terms = get_the_terms(get_the_ID(), 'genre');
-                 if (!empty($terms) && !is_wp_error($terms)) {
-                  echo esc_html($terms[0]->name);
-                 }?>
+                  if (!empty($terms) && !is_wp_error($terms)) {
+                    echo esc_html($terms[0]->name);
+                  }
+                  ?>
                 </span>
                 <?php if (has_post_thumbnail()): ?>
                 <?php the_post_thumbnail(); ?>
                 <?php else: ?>
-                 <img src="<?php echo esc_url( get_template_directory_uri() . '/images/common/no-image.png' ); ?>" alt="No image">
+                 <img src="<?php echo esc_url(get_template_directory_uri() . '/images/common/no-image.png'); ?>" alt="No image">
                  <?php endif; ?>
                 </div>
                 <div class="p-result-list-item__body">
@@ -49,18 +49,19 @@
                 </div>
               </a>
             </div>
-            <?php
-          endwhile;
-           endif;
-           ?>       
-         </div>
+            <?php endwhile; ?>
+          </div>
 
+          <!-- ページャー -->
+          <div class="p-result-list__pagination c-pager" >
+              <?php wp_pagenavi(); ?>
+          </div>
+          <?php else : ?>
+          <p class="c-text__empty">投稿がありません</p>
+          <?php endif; ?>
+
+          
       </div>
-
-   <!-- ページャー -->
-        <div class="p-result-list__pagination c-pager" >
-            <?php wp_pagenavi(); ?>
-        </div>
 
         
       </section>

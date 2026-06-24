@@ -28,51 +28,88 @@ add_action('after_setup_theme', 'custom_theme_setup');
 function add_files(){
 
     $now = date('YmdHis');
-
-    // css
-    wp_register_style('common-style', get_theme_file_uri('/css/style.css'),array(), $now);
-
-    // 共通css
-    wp_enqueue_style('slick-style', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), NULL);
-    wp_enqueue_style('common-style');
-
-    // WordPress提供のiquery.jsを読み込まない
-    wp_deregister_script('jquery'); 
-    
-    
-    // jqueryの読み込み
-    wp_enqueue_script('jquery', '//code.jquery.com/jquery-3.7.1.min.js', "",NULL,false); 
-    
-    // SwiperのCSS（CDN）
-   wp_enqueue_style(
-        'swiper',
-        'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css',
-        array(),
-        null
-    );
-
-
-    // ★ Swiper（CDN）
-wp_enqueue_script(
-  'swiper',
-  'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',
+// Google Fonts 
+wp_enqueue_style( 
+  'google-fonts', 
+  'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap', 
   array(),
-  NULL,
-  true
-);
+  null 
+  ); 
+
+// リセットCSS 
+  wp_enqueue_style( 
+    'reset', 
+    get_template_directory_uri() . '/css/reset.css',
+     array(), 
+     '1.0.0' 
+     ); 
+
+
+// slickのcss 
+  wp_enqueue_style(
+      'slick-style', 
+      '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', 
+      array(),
+       NULL
+       ); 
 
 
 
-    // JS登録
-    wp_register_script('common-script', get_theme_file_uri('/js/main.js'), array('jquery', 'swiper'), $now, true);
+// SwiperのCSS（CDN） 
+  wp_enqueue_style(
+         'swiper', 
+         'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css',
+     array(),
+      null 
+      );
 
+// 共通css 
+  wp_register_style(
+    'common-style', 
+    get_theme_file_uri('/css/style.css'),
+    array(), 
+    $now
+    );       
 
-    // 共通のJS
-    wp_enqueue_script('slick-script', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), NULL, true);
-    wp_enqueue_script( 'common-script' );
+   wp_enqueue_style('common-style'); 
 
-    
-}
+// WordPress提供のiquery.jsを読み込まない 
+  wp_deregister_script('jquery'); 
+
+// jqueryの読み込み 
+  wp_enqueue_script(
+        'jquery', 
+        'https://code.jquery.com/jquery-3.7.1.min.js', "",
+        NULL,
+        false
+        );      
+
+// ★ SwiperのJS（CDN）
+  wp_enqueue_script( 
+        'swiper', 
+        'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', 
+        array(), 
+        NULL, 
+        true 
+        );
+
+// JS登録 
+wp_register_script(
+      'common-script', 
+      get_theme_file_uri('/js/main.js'), 
+      array('jquery', 'swiper'), 
+      $now, 
+      true); 
+      // 共通のJS 
+      wp_enqueue_script(
+        'slick-script', 
+        'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', 
+        array('jquery'),
+         NULL, true); 
+         wp_enqueue_script( 
+          'common-script' 
+          );
+           }
 add_action('wp_enqueue_scripts', 'add_files');
 
 // --------------------------------------------------

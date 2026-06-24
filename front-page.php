@@ -158,12 +158,8 @@
                     </p>
                   </div>
                 </a>
-              <?php
-                endwhile;
-                endif;
-                wp_reset_postdata();
-                ?>             
-                   
+                <?php endwhile; ?>
+                              
               </div>
             </div>
             <button class="p-voice__swiper-button-prev">
@@ -173,6 +169,14 @@
               <img src="<?php echo get_template_directory_uri(); ?>/images/voice/arrow-right.svg" alt="矢印">
             </button>
           </div>
+    <?php else : ?>
+
+      <p class="c-text__empty">投稿がありません。</p>
+
+    <?php endif; ?>
+
+    <?php wp_reset_postdata(); ?>
+
         </div>
       </section>
 
@@ -324,6 +328,10 @@
                 </a>
                 <?php
                 endwhile;
+                else :
+                ?>
+                <p class="c-text__empty">投稿がありません</p>
+                <?php
                 endif;                
                 wp_reset_postdata();
                 ?>

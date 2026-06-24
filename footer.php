@@ -16,7 +16,7 @@
             <img src="<?php echo get_template_directory_uri(); ?>/images/icon/logo-white.svg" alt="きたむらミュージックスクール">
           </a>
         </div>
-        <p class="p-footer__copyright">Copyright&nbsp;&copy;&nbsp;0000 KITAMURA music school Inc. All Rights</p>
+        <p class="p-footer__copyright">Copyright&nbsp;&copy;&nbsp;0000 KITAMURA music school Inc. <br class="sp">All Rights</p>
         <div class="p-footer__sns">
           <ul>
             <li>
