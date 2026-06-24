@@ -165,3 +165,14 @@ function my_theme_setup() {
   add_theme_support('title-tag');
 }
 add_action('after_setup_theme', 'my_theme_setup');
+
+// お問い合わせページ以外では reCAPTCHA を読み込まない
+function my_dequeue_recaptcha_except_contact() {
+  if ( is_page( 'contact' ) ) {
+    return;
+  }
+
+  wp_dequeue_script( 'google-recaptcha' );
+  wp_deregister_script( 'google-recaptcha' );
+}
+add_action( 'wp_enqueue_scripts', 'my_dequeue_recaptcha_except_contact', 100 );
