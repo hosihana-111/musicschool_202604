@@ -61,3 +61,18 @@
 
 
 }
+
+.p-header__nav ul li.c-btn--head {
+  display: block;
+}
+
+.p-header__nav ul li.c-btn--head > a {
+  display: grid;
+  place-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  color: inherit;
+  text-decoration: none;
+}
