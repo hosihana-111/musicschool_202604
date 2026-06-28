@@ -47,7 +47,7 @@
   font-weight: 500;
   flex: 1;
   padding: 1.74rem 2.9rem 1.74rem 6.5rem;
-  align-items: center;
+
    @include sp {
     font-size: 1.6rem;
     line-height: calc(30 / 16);
@@ -69,7 +69,9 @@
   border-radius: 50%;
   font-weight: 700;
   font-size: 2rem;  
-  padding-inline: 1rem;
+  line-height: 1;
+   display: grid;
+  place-items: center;
 
   @include sp {
      left: 0.2rem;
@@ -132,8 +134,10 @@
   color: $white;
   border-radius: 50%;
   font-weight: 700;
-  font-size: 2rem;  
-  padding-inline: 1.1rem;
+  font-size: 2rem;
+    line-height: 1;
+   display: grid;
+  place-items: center;
 
    @include sp {
      left: 0.2rem;

@@ -48,7 +48,7 @@
                  <?php endif; ?>
                 </div>
                 <div class="p-result-list-item__body">
-                  <h3 class="p-result-list-item__title"><?php echo wp_trim_words(get_the_title(), 32, '...'); ?></h3>
+                  <h3 class="p-result-list-item__title"> <?php echo esc_html(get_the_title()); ?></h3>
                   <time class="p-result-list-item__date"  datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
                 </div>
               </a>

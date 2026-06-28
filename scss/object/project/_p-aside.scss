@@ -166,12 +166,10 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-
-  // Firefox など非対応ブラウザ用のフォールバック（1行のみ省略）    
-  // @supports not (-webkit-line-clamp: 2) {
-  //   white-space: nowrap;
-  //   text-overflow: ellipsis;
-  // }
+  min-width: 0;
+   margin: 0;
+  
+  max-height: calc(1.7rem * (28 / 17) * 2);
 
   @include sp {
     margin-top: 0.5rem;

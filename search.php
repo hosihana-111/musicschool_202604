@@ -45,11 +45,11 @@
                 </div>
                 <div class="p-search__body">
                   <h2 class="p-search__heading">
-                    <?php echo wp_trim_words(get_the_title(), 26, '...'); ?>
+                     <?php echo esc_html(get_the_title()); ?>
                   </h2>                 
                    <time class="p-search__date"  datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
                   <p class="p-search__text c-text">
-                   <?php echo wp_trim_words(get_the_content(), 120, '...'); ?></p>
+                   <?php echo wp_trim_words(get_the_content()); ?></p>
                 </div>
               </a>  
               <?php

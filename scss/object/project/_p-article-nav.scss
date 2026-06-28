@@ -85,6 +85,10 @@
     line-height: calc(25 / 16);
     color: $black;
     
+    @include sp {
+      
+        -webkit-line-clamp: 2; // 最大行
+    }
     /* 高さ固定 */
 
     // @supports not (-webkit-line-clamp: 3) {

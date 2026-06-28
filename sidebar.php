@@ -47,7 +47,7 @@
                         <img src="<?php echo esc_url( get_template_directory_uri() . '/images/common/no-image.png' ); ?>" alt="No image">
                       <?php endif; ?>
                       </div>
-                      <p class="p-sidebar__recommendation-text"><?php echo wp_trim_words(get_the_title(), 15, '...'); ?></p>
+                      <p class="p-sidebar__recommendation-text"> <?php echo esc_html(get_the_title()); ?></p>
                     </a>
                      <?php
                        endwhile;

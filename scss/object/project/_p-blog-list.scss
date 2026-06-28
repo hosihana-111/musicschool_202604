@@ -72,10 +72,18 @@
 .p-blog-list-item__heading {
     font-size: 2rem;
     line-height: calc(25 / 20);
-    font-weight: 700;    
+    font-weight: 700; 
+    display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+
+  // 2行分の高さを明示して省略を安定させる
+  max-height: calc(2rem * (25 / 20) * 2);   
 
     @include sp {
-        line-height: calc(30 / 20);       
+        line-height: calc(30 / 20);   
+          max-height: calc(2rem * calc(30 / 20) * 2);       
     }
 }
 
@@ -97,10 +105,11 @@
   -webkit-line-clamp: 3;
   overflow: hidden;
    margin-top: 1.2rem;
-
+  
     @include sp {       
         text-align: left;
         margin-top: 1rem;
+     
     }
 }
 .p-blog-list__pagination{

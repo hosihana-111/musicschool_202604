@@ -110,7 +110,10 @@
     font-size: 2rem;
     line-height: calc(25 / 20);
     font-weight: 700;
-
+display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; // 最大行
+    overflow: hidden;
 
     @include sp {
         line-height: calc(30 / 20);
@@ -142,6 +145,7 @@
     @include sp {
         text-align: left;
         margin-top: 1.6rem;
+      
     }
 }
 

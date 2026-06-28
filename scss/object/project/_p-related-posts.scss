@@ -61,29 +61,6 @@
 
 
 
-
-
-// .p-related-posts__img {
-//     position: relative;
-//     width: 20rem;
-    
-//     @include sp {
-//         width: 16rem;
-//     }
-
-//     img {
-//         aspect-ratio: 20 / 14;
-//         height: auto;
-//         display: block;
-//         object-fit: cover;
-
-//         @include sp {
-//             aspect-ratio: 16 / 11;
-
-//         }
-//     }
-// }
-
 // blog用
 .p-blog-details__related-posts {
     .p-related-posts__img {
@@ -176,21 +153,13 @@
     line-height: calc(25 / 20);
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3; // 最大3行
+    -webkit-line-clamp: 2; // 最大2行
     overflow: hidden;
 
 
     @include sp {
         font-size: 1.7rem;
-        line-height: calc(28 / 17);
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2; // 最大2行
-        overflow: hidden;
-        text-overflow: ellipsis;
-        // max-height: calc(28 / 17 * 2);
-
-
+        line-height: calc(28 / 17);        
     }
 }
 
