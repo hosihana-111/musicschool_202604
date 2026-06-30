@@ -49,7 +49,7 @@
                   </h2>                 
                    <time class="p-search__date"  datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
                   <p class="p-search__text c-text">
-                   <?php echo wp_trim_words(get_the_content()); ?></p>
+                   <?php echo esc_html(wp_strip_all_tags(get_the_content())); ?></p>
                 </div>
               </a>  
               <?php

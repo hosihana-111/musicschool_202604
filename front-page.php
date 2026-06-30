@@ -154,7 +154,7 @@
                   <div class="p-voice-item__body">
                     <h3 class="p-voice-item__title"><?php the_field('job'); ?>&emsp;<?php the_field('name'); ?>さん</h3>
                     <p class="p-voice-item__desc">
-                      <?php echo wp_trim_words(get_the_content(), 42, '...'); ?>
+                      <?php echo esc_html(wp_strip_all_tags(get_the_content())); ?>
                     </p>
                   </div>
                 </a>

@@ -61,7 +61,7 @@
                     </div>
                     <div class="p-related-posts__body">
                       <div class="p-related-posts__text"> 
-                        <h3><?php echo wp_trim_words(get_the_title(), 32, '...'); ?></h3>
+                        <h3><?php echo esc_html(get_the_title()); ?></h3>
                       </div>
                       <div class="p-related-posts__date">
                         <time  datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
