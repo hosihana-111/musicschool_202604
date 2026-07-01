@@ -863,13 +863,6 @@ body.is-menu-open .c-page-top {
   font-weight: 700;
   line-height: 1.5625;
   color: #000000;
-}
-@media (max-width: 767px) {
-  .p-article-nav__box-text {
-    -webkit-line-clamp: 2;
-  }
-}
-.p-article-nav__box-text {
   /* 高さ固定 */
 }
 
@@ -4491,7 +4484,7 @@ textarea {
   font-weight: 700;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   overflow: hidden;
 }
 @media (max-width: 767px) {
@@ -4846,7 +4839,7 @@ textarea {
 }
 
 .p-result-details__nav {
-  margin-top: 5.7rem;
+  margin-top: 6rem;
 }
 .p-result-details__nav .p-article-nav {
   display: -webkit-box;
@@ -4873,7 +4866,7 @@ textarea {
 }
 
 .p-result-details__related-posts {
-  margin-top: 10rem;
+  margin-top: 9.3rem;
 }
 @media (max-width: 767px) {
   .p-result-details__related-posts {

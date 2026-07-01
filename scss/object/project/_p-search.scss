@@ -112,7 +112,7 @@
     font-weight: 700;
 display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2; // 最大行
+    -webkit-line-clamp: 1; // 最大行
     overflow: hidden;
 
     @include sp {
@@ -138,7 +138,7 @@ display: -webkit-box;
 .p-search__text {
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 3; // 最大行
     overflow: hidden;
     margin-top: 2rem;
 
