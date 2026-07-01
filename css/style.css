@@ -4484,7 +4484,6 @@ textarea {
   font-weight: 700;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
   overflow: hidden;
 }
 @media (max-width: 767px) {
